@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quản Lý Bán Hàng</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">Database Manager</div>
+      <div class="sidebar-title">Quản Lý<br>Bán Hàng</div>
+      <div class="sidebar-subtitle">QuanLyBanHang · MySQL</div>
+    </div>
+    <div class="sidebar-section">Tables</div>
+    <nav id="table-nav"></nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="main">
+    <div id="topbar">
+      <div id="table-title">Select a table</div>
+      <input id="search-box" type="text" placeholder="Search…" style="display:none"/>
+      <button id="btn-add" style="display:none">＋ Add Row</button>
+    </div>
+    <div id="content">
+      <div id="empty-state">
+        <div class="big-icon">🗄️</div>
+        <h2>Chọn một bảng để bắt đầu</h2>
+        <p>Select a table from the sidebar</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Row</h3>
+        <button id="modal-close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer">
+        <button class="btn-cancel" id="btn-cancel">Cancel</button>
+        <button class="btn-save"   id="btn-save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM -->
+  <div id="confirm-overlay">
+    <div id="confirm-box">
+      <h4>Delete Row?</h4>
+      <p id="confirm-msg">This action cannot be undone.</p>
+      <div class="confirm-btns">
+        <button class="btn-cancel" id="btn-confirm-cancel">Cancel</button>
+        <button class="btn-confirm-del" id="btn-confirm-del">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
