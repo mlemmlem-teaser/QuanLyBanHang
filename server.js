@@ -10,8 +10,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ── DB CONFIG (Windows Authentication) ───────────────────
 const dbConfig = {
-  user: 'MlemMlem',
-  password: '24478392mlem###', 
+  user: '',
+  password: '',
   server: 'localhost\\SQLEXPRESS',
   database: 'QuanLyBanHang',
   options: {
